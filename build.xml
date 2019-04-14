@@ -1,6 +1,6 @@
 <project name="19-Abgabe02-Gsellmann-Haingartner">
   <property file = "build.properties"/>
-  
+
   <target name="clean">
 	<delete dir="build-ant"/>
   </target>
@@ -33,7 +33,7 @@
 
   <target name="run" depends="install">
     <java jar="build-ant/dist/${filename}" fork="true">
-	<arg value="Gerald and Werner"/>
+	<arg value="${argument}"/>
 	</java>
   </target>
 
