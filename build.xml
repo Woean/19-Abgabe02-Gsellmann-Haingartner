@@ -1,13 +1,14 @@
 <project name="19-Abgabe02-Gsellmann-Haingartner">
-
+  <property file = "build.properties"/>
+  
   <target name="clean">
-		<delete dir="build-ant"/>
+	<delete dir="build-ant"/>
   </target>
 
   <target name="init">
-	   <mkdir dir="build-ant/classes"/>
-	   <mkdir dir="build-ant/dist"/>
-	   <mkdir dir="build-ant/lib"/>
+	<mkdir dir="build-ant/classes"/>
+	<mkdir dir="build-ant/dist"/>
+	<mkdir dir="build-ant/lib"/>
   </target>
 
   <target name="compile" depends="init">
@@ -30,5 +31,10 @@
      </copy>
    </target>
 
+  <target name="run" depends="install">
+    <java jar="build-ant/dist/${filename}" fork="true">
+	<arg value="Gerald and Werner"/>
+	</java>
+  </target>
 
 </project>
