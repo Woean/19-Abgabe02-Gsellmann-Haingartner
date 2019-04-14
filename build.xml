@@ -10,5 +10,8 @@
 	   <mkdir dir="build-ant/lib"/>
   </target>
 
+  <target name="compile" depends="init">
+    <javac srcdir="src" destdir="build-ant/classes" includeantruntime="false"/>
+  </target>
 
 </project>
