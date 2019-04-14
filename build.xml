@@ -1,19 +1,10 @@
 <project name="19-Abgabe02-Gsellmann-Haingartner">
 
   <target name="init">
-    <mkdir dir="src"/>
-	<mkdir dir="build-ant/classes"/>
-	<mkdir dir="build-ant/dist"/>
-	<mkdir dir="build-ant/lib"/>
-  </target>  
-  
-  <target name="clean">
-  	<delete dir="src"/>
-	<delete dir="build-ant"/>
+	   <mkdir dir="build-ant/classes"/>
+	   <mkdir dir="build-ant/dist"/>
+	   <mkdir dir="build-ant/lib"/>
   </target>
 
-  <target name="compile" depends="init">
-    <javac srcdir="src" destdir="build-ant" includeantruntime="false"/>
-  </target>  
-  
+
 </project>
